@@ -11,8 +11,6 @@ var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
 
-
-
 function startQuiz() {
   var startEl = document.getElementById("start-screen");
   startEl.setAttribute("class", "hide");
@@ -21,8 +19,6 @@ function startQuiz() {
   timerEl.textContent = time;
   getQuestion();
 }
-
-startBtn.onclick = startQuiz;
 
 function getQuestion() {
   var currentQuestion = questions[currentQuestionIndex];
@@ -106,6 +102,6 @@ function checkForEnter(event) {
   }
 }
 
+startBtn.onclick = startQuiz;
 submitBtn.onclick = saveHighscore;
-
 initEl.onkeyup = checkForEnter;
